@@ -1,0 +1,289 @@
+
+
+/*---------- login and sign up ----------*/
+
+.login {
+    color: #fafafa;
+    background: #121212;
+    text-align: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.login input {
+    min-width: 250px;
+    width: 25vw;
+    text-align: center;
+    color: #fafafa;
+    background: none;
+    border: none;
+    margin-bottom: 1px;
+}
+
+.login section {
+    transition: opacity 1s;
+}
+
+.login input:focus {
+    outline: none;
+    border: none;
+}
+
+.form-header {
+    margin-bottom: 40px;
+}
+
+.form-button {
+    box-sizing: content-box;
+    border-radius: 20px;
+    border-width: 0;
+    width: 60px;
+    background-color: #50c878;
+    padding: 10px;
+    margin: 0 10px;
+    transition: background-color 0.25s;
+}
+
+.form-button:hover {
+    background-color: #70d290;
+}
+
+.form-button:focus {
+    background-color: #2d8f4e;
+    outline: 0;
+}
+
+.button-container a:focus {
+    outline: 0;
+}
+
+
+/*---------- main app ----------*/
+
+/*
+  Light Steel Blue: #B5DCCD
+*/
+
+/* ---------- global styles ----------*/
+
+.app-content {
+    color: #fafafa;
+    background: #121212;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    padding: 30px;
+}
+
+.line {
+    margin: auto auto 25px;
+    height: 1px;
+    min-width: 275px;
+    width: 25vw;
+    background: linear-gradient(90deg,
+                                rgba(2, 0, 36, 0) 0%,
+                                rgb(181, 220, 205) 50%,
+                                rgba(0, 212, 255, 0) 100%);
+}
+
+.form-input:focus-within .line{
+    background: linear-gradient(90deg,
+                                rgba(2, 0, 36, 0) 0%,
+                                rgb(45, 143, 78) 50%,
+                                rgba(0, 212, 255, 0) 100%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #121212 inset;
+    -webkit-text-fill-color: #fafafa;
+}
+
+.icon-button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: rgba(255,255,255,.5);
+}
+
+.icon-button:hover {
+    color: #B5DCCD !important;
+}
+
+/*---------- navigation ----------*/
+
+nav {
+    background: #1D1D1D;
+    text-align: center;
+}
+
+nav a:hover, nav a i:hover {
+    color: #B5DCCD !important;
+}
+
+.icon {
+    display: block;
+    position: relative;
+}
+
+nav input[type=text] {
+    color: #fafafa;
+    background: #121212;
+    width: 25vw;
+    min-width: 200px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 5px;
+    height: 30px;
+}
+
+nav input[type=text]:focus {
+    outline: none;
+    border: 1px solid #B5DCCD;
+}
+
+/* ---------- track form ---------- */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.60);
+    z-index: 1000;
+    transition: opacity 0.2s;
+    backdrop-filter: blur(1px);
+    text-align: center;
+}
+
+.backdrop-enter {
+    opacity: 0;
+}
+
+.backdrop-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+.backdrop-exit {
+    opacity: 1;
+}
+
+.backdrop-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.backdrop-container-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.backdrop-container-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 200ms, transform 200ms;
+}
+
+.backdrop input {
+    min-width: 250px;
+    width: 25vw;
+    text-align: center;
+    color: #fafafa;
+    background: none;
+    border: none;
+    margin-bottom: 1px;
+}
+
+.backdrop input:focus {
+    outline: none;
+    border: none;
+}
+
+.backdrop input:-webkit-autofill,
+.backdrop input:-webkit-autofill:hover,
+.backdrop input:-webkit-autofill:focus,
+.backdrop input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #121212 inset;
+    -webkit-text-fill-color: #fafafa;
+}
+
+/* ---------- tracks ---------- */
+
+.product {
+    text-align: center;
+    background: #1D1D1D !important;
+    transition: box-shadow 0.3s, background 0.3s;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+                0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+                0px 3px 3px -2px rgba(0, 0, 0, 0.12) !important;
+}
+
+.product:hover {
+    background: #2D2D2D !important;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+                0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+}
+
+.delete-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+/*---------- responsive ----------*/
+
+@media screen and (min-width: 577px) {
+    .right-nav .search-right {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .center-nav {
+        display: none !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 3 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 4 !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 5 !important;
+    }
+}
+
+
+
